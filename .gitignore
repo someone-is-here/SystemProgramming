@@ -1,3 +1,11 @@
 SP1/.vs/*
 SP1/x64/*
 SP1/SP1/x64/*
+
+SP2/Child/.vs/*
+SP2/Child/x64/*
+SP2/Child/Child/x64/*
+SP2/Child/Parent/x64/*
+
+SP3/.vs/*
+SP3/x64/*
