@@ -32,7 +32,7 @@ int main() {
 		return -1;
 	}
 
-	Sleep(10000);
+	Sleep(100000);
 
 	GetExitCodeProcess(pi.hProcess, &excode);
 

@@ -1,0 +1,9 @@
+﻿  Source.cpp
+  Threads.cpp
+C:\Users\Татьяна\source\repos\SP3\SP3\Threads.cpp(18,55): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\Татьяна\source\repos\SP3\SP3\Threads.cpp(110,9): warning C4129: 's': unrecognized character escape sequence
+C:\Users\Татьяна\source\repos\SP3\SP3\Threads.cpp(167,19): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+C:\Users\Татьяна\source\repos\SP3\SP3\Threads.cpp(170,19): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+C:\Users\Татьяна\source\repos\SP3\SP3\Threads.cpp(173,19): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+  Generating Code...
+  SP3.vcxproj -> C:\Users\Татьяна\source\repos\SP3\x64\Debug\SP3.exe

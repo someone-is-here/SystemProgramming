@@ -49,12 +49,12 @@ DWORD WINAPI bubble_sort(LPVOID lpParam) {
 
 	int* arr = create_array(size);
 	print_array(arr, size);
-	
+
 	int iter = 0;
 	for (int i = 0; i < size; i++, ++iter) {
 		DisplayMessage(hStdout, (char*)L"Bubble_sort", iter, i);
 		for (int j = 0; j < size - i - 1; j++, ++iter) {
-			if (arr[j] > arr[j+1]) {
+			if (arr[j] > arr[j + 1]) {
 				int temp = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = temp;
@@ -62,7 +62,7 @@ DWORD WINAPI bubble_sort(LPVOID lpParam) {
 		}
 	}
 	unsigned int end_time = clock();
-	printf("\nBubble_sort DONE!\nTime: %d\n", end_time-start_time);
+	printf("\nBubble_sort DONE!\nTime: %d\n", end_time - start_time);
 	print_array(arr, size);
 
 	return 0;
@@ -152,9 +152,9 @@ int main() {
 	HANDLE th_bubble_sort = 0;
 	HANDLE th_selection_sort = 0;
 	HANDLE th_insertion_sort = 0;
-	
+
 	HANDLE th_array[3];
-	
+
 	th_bubble_sort = CreateThread(NULL, 0, bubble_sort, &size, 1, 0);
 	th_selection_sort = CreateThread(NULL, 0, selection_sort, &size, 1, 0);
 	th_insertion_sort = CreateThread(NULL, 0, insertion_sort, &size, 1, 0);

@@ -9,7 +9,7 @@ int main() {
 	cout << "Child process start" << endl;
 	cout << "Child process running..." << endl;
 	//cout << "Child process sleeping..." << endl;
-	//Sleep(300);
+	Sleep(10000);
 	//cout << "Child process awake!" << endl;
 	cout << "Child process end!" << endl;
 
