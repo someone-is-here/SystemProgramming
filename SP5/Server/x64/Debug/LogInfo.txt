@@ -1,0 +1,8 @@
+2022-10-31 22:54:13 Connected to pipe\\.\pipe\t1
+2022-10-31 22:54:13 Instance Thread created, receiving and processing messages.0
+2022-10-31 22:54:13 hello  	 ThreadID: 0
+2022-10-31 22:54:18 Connected to pipe\\.\pipe\t1
+2022-10-31 22:54:18 Instance Thread created, receiving and processing messages.24237
+2022-10-31 22:54:18 my world is here 	 ThreadID: 24237
+2022-10-31 22:54:31 Instance Thread: client disconnected.24237
+2022-10-31 22:54:31 Instance Thread: client disconnected.24237

@@ -1,0 +1,9 @@
+#pragma once
+#pragma warning(disable:4996)
+#include <windows.h> 
+#include <iostream>
+#include <string>
+#include <list>
+#include <algorithm>
+#include <time.h>
+#include <fstream>
