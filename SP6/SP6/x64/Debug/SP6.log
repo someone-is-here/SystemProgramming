@@ -1,0 +1,7 @@
+﻿  Source.cpp
+C:\Users\Татьяна\source\repos\SP6\SP6\Source.cpp(31,33): warning C4311: 'type cast': pointer truncation from 'const LPVOID' to 'int'
+C:\Users\Татьяна\source\repos\SP6\SP6\Source.cpp(31,33): warning C4302: 'type cast': truncation from 'const LPVOID' to 'int'
+C:\Users\Татьяна\source\repos\SP6\SP6\Source.cpp(32,34): warning C4311: 'type cast': pointer truncation from 'const LPVOID' to 'int'
+C:\Users\Татьяна\source\repos\SP6\SP6\Source.cpp(32,34): warning C4302: 'type cast': truncation from 'const LPVOID' to 'int'
+C:\Users\Татьяна\source\repos\SP6\SP6\Source.cpp(56,64): warning C4312: 'type cast': conversion from 'int' to 'LPVOID' of greater size
+  SP6.vcxproj -> C:\Users\Татьяна\source\repos\SP6\x64\Debug\SP6.exe
