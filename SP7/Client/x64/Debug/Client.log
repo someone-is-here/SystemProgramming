@@ -1,0 +1,5 @@
+﻿  Client.cpp
+C:\Users\Татьяна\source\repos\SP7\Client\Client.cpp(44,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Татьяна\source\repos\SP7\Client\Client.cpp(110,11): warning C4101: 'thID': unreferenced local variable
+C:\Users\Татьяна\source\repos\SP7\Client\Client.cpp(25): warning C4715: 'MyThreadFunction': not all control paths return a value
+  Client.vcxproj -> C:\Users\Татьяна\source\repos\SP7\x64\Debug\Client.exe

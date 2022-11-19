@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 
-#define SIZE_BUFFER 100000
+#define SIZE_BUFFER 1000
 
 #define PATH L"NotSorted.txt"
 #define PATH2 L"SortedSync.txt"
@@ -160,23 +160,23 @@ int SyncReadSortWrite() {
 }
 
 char* EndSorting(Param p1, Param p2, Param p3, Param p4) {
-    size_t size = p1.size;
+    size_t size = p1.size + p2.size + p3.size + p4.size;
     int i1 = 0, i2 = 0, i3 = 0, i4 = 0;
     int i = 0;
-    CHAR* result = (CHAR*)calloc(size * 4, sizeof(CHAR));
+    CHAR* result = (CHAR*)calloc(size, sizeof(CHAR));
 
-    while (i1 != size || i2 != size || i3 != size || i4 != size) {
+    while (i1 != p1.size || i2 != p2.size || i3 != p3.size || i4 != p4.size) {
         char ch1 = 127, ch2 = 127, ch3 = 127, ch4 = 127;
-        if (i1 != size) {
+        if (i1 != p1.size) {
             ch1 = p1.arr[i1];
         }
-        if (i2 != size) {
+        if (i2 != p2.size) {
             ch2 = p2.arr[i2];
         }
-        if (i3 != size) {
+        if (i3 != p3.size) {
             ch3 = p3.arr[i3];
         }
-        if (i4 != size) {
+        if (i4 != p4.size) {
             ch4 = p4.arr[i4];
         }
 
@@ -292,7 +292,7 @@ BOOL ReadFromFileAsync(){
         }
     }
 
-    if (!ReadFile(hFile, &bFourthLineBuf[0], dwLineSize, &iNumRead4, &oReadFourthLine)) {
+    if (!ReadFile(hFile, &bFourthLineBuf[0], SIZE_BUFFER - dwLineSize * 3, &iNumRead4, &oReadFourthLine)) {
         if (GetLastError() != ERROR_IO_PENDING) {
             cout << "Error starting I/O to read forth line" << endl;
             CancelIo(hFile);
@@ -330,7 +330,7 @@ BOOL ReadFromFileAsync(){
     Param p1 = { bFirstLineBuf, dwLineSize};
     Param p2 = { bSecondLineBuf, dwLineSize };
     Param p3 = { bThirdLineBuf, dwLineSize };
-    Param p4 = { bFourthLineBuf, dwLineSize };
+    Param p4 = { bFourthLineBuf, SIZE_BUFFER - dwLineSize * 3};
   
 
     hEventsSorting[0] = CreateThread(NULL, 0, SelectionSort, &p1, 1, 0);
@@ -391,7 +391,7 @@ BOOL ReadFromFileAsync(){
         }
     }
 
-    if (!WriteFile(hFile2, &res[dwLineSize*3], dwLineSize, &iNumRead4, &oReadFourthLine)) {
+    if (!WriteFile(hFile2, &res[dwLineSize*3], SIZE_BUFFER - 3*dwLineSize, &iNumRead4, &oReadFourthLine)) {
         if (GetLastError() != ERROR_IO_PENDING) {
             cout << "Error starting I/O to read forth line" << endl;
             CancelIo(hFile);
